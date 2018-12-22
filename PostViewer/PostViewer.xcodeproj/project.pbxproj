@@ -16,6 +16,7 @@
 		CDCA416221CEC8EB00B957AC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CDCA416021CEC8EB00B957AC /* LaunchScreen.storyboard */; };
 		CDCA416D21CEC8EB00B957AC /* PostViewerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDCA416C21CEC8EB00B957AC /* PostViewerTests.swift */; };
 		CDCA417821CEC8EB00B957AC /* PostViewerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDCA417721CEC8EB00B957AC /* PostViewerUITests.swift */; };
+		CDCA418621CECC2500B957AC /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CDCA418521CECC2500B957AC /* GoogleService-Info.plist */; };
 		D62C1D2164596B0790459BCE /* Pods_PostViewerUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A88030336DE63155693B8E4E /* Pods_PostViewerUITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -58,6 +59,7 @@
 		CDCA417321CEC8EB00B957AC /* PostViewerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PostViewerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CDCA417721CEC8EB00B957AC /* PostViewerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostViewerUITests.swift; sourceTree = "<group>"; };
 		CDCA417921CEC8EB00B957AC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CDCA418521CECC2500B957AC /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		EC81625923CA5C5204FBAB48 /* Pods-PostViewerTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PostViewerTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-PostViewerTests/Pods-PostViewerTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -130,6 +132,7 @@
 				CDCA415E21CEC8EB00B957AC /* Assets.xcassets */,
 				CDCA416021CEC8EB00B957AC /* LaunchScreen.storyboard */,
 				CDCA416321CEC8EB00B957AC /* Info.plist */,
+				CDCA418521CECC2500B957AC /* GoogleService-Info.plist */,
 			);
 			path = PostViewer;
 			sourceTree = "<group>";
@@ -177,7 +180,6 @@
 				CDCA415121CEC8E800B957AC /* Frameworks */,
 				CDCA415221CEC8E800B957AC /* Resources */,
 				ECBB3C4564A5B791123E7D9B /* [CP] Embed Pods Frameworks */,
-				71E72F17859B42CD6697C3AC /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -196,8 +198,6 @@
 				CDCA416421CEC8EB00B957AC /* Sources */,
 				CDCA416521CEC8EB00B957AC /* Frameworks */,
 				CDCA416621CEC8EB00B957AC /* Resources */,
-				8DED65A55C6E7158A2319C9B /* [CP] Embed Pods Frameworks */,
-				4FA5E357228D7E70CCEB131C /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -217,8 +217,6 @@
 				CDCA416F21CEC8EB00B957AC /* Sources */,
 				CDCA417021CEC8EB00B957AC /* Frameworks */,
 				CDCA417121CEC8EB00B957AC /* Resources */,
-				F191322D00607AC0A2D923BB /* [CP] Embed Pods Frameworks */,
-				74A59C9D7C70F7F279FA6D96 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -279,6 +277,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CDCA416221CEC8EB00B957AC /* LaunchScreen.storyboard in Resources */,
+				CDCA418621CECC2500B957AC /* GoogleService-Info.plist in Resources */,
 				CDCA415F21CEC8EB00B957AC /* Assets.xcassets in Resources */,
 				CDCA415D21CEC8E800B957AC /* Main.storyboard in Resources */,
 			);
@@ -301,82 +300,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		4FA5E357228D7E70CCEB131C /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PostViewerTests/Pods-PostViewerTests-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		71E72F17859B42CD6697C3AC /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PostViewer/Pods-PostViewer-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		74A59C9D7C70F7F279FA6D96 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PostViewerUITests/Pods-PostViewerUITests-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		8DED65A55C6E7158A2319C9B /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PostViewerTests/Pods-PostViewerTests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		91AECD48EF19119CD9C5AB34 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -451,34 +374,20 @@
 			inputFileListPaths = (
 			);
 			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-PostViewer/Pods-PostViewer-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
 			);
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PostViewer/Pods-PostViewer-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		F191322D00607AC0A2D923BB /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PostViewerUITests/Pods-PostViewerUITests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */

@@ -6,6 +6,8 @@ target 'PostViewer' do
   use_frameworks!
 
   # Pods for PostViewer
+  
+  pod 'Firebase/Core'
 
   target 'PostViewerTests' do
     inherit! :search_paths
