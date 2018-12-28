@@ -10,7 +10,7 @@
 		4B4DC642AB53896D2E12A7AD /* Pods_PostViewer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E234D77D6EC6A9A62753F8E /* Pods_PostViewer.framework */; };
 		6696919D030A12661645B82F /* Pods_PostViewerTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7D7C09F18F28359ED768E68 /* Pods_PostViewerTests.framework */; };
 		CDCA415821CEC8E800B957AC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDCA415721CEC8E800B957AC /* AppDelegate.swift */; };
-		CDCA415A21CEC8E800B957AC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDCA415921CEC8E800B957AC /* ViewController.swift */; };
+		CDCA415A21CEC8E800B957AC /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDCA415921CEC8E800B957AC /* LoginViewController.swift */; };
 		CDCA415D21CEC8E800B957AC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CDCA415B21CEC8E800B957AC /* Main.storyboard */; };
 		CDCA415F21CEC8EB00B957AC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CDCA415E21CEC8EB00B957AC /* Assets.xcassets */; };
 		CDCA416221CEC8EB00B957AC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CDCA416021CEC8EB00B957AC /* LaunchScreen.storyboard */; };
@@ -48,7 +48,7 @@
 		A88030336DE63155693B8E4E /* Pods_PostViewerUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PostViewerUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CDCA415421CEC8E800B957AC /* PostViewer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PostViewer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CDCA415721CEC8E800B957AC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		CDCA415921CEC8E800B957AC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		CDCA415921CEC8E800B957AC /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		CDCA415C21CEC8E800B957AC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		CDCA415E21CEC8EB00B957AC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CDCA416121CEC8EB00B957AC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -60,6 +60,7 @@
 		CDCA417721CEC8EB00B957AC /* PostViewerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostViewerUITests.swift; sourceTree = "<group>"; };
 		CDCA417921CEC8EB00B957AC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CDCA418521CECC2500B957AC /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		CDFF75D221D59C2400027206 /* PostViewer.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = PostViewer.entitlements; sourceTree = "<group>"; };
 		EC81625923CA5C5204FBAB48 /* Pods-PostViewerTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PostViewerTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-PostViewerTests/Pods-PostViewerTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -126,8 +127,9 @@
 		CDCA415621CEC8E800B957AC /* PostViewer */ = {
 			isa = PBXGroup;
 			children = (
+				CDFF75D221D59C2400027206 /* PostViewer.entitlements */,
 				CDCA415721CEC8E800B957AC /* AppDelegate.swift */,
-				CDCA415921CEC8E800B957AC /* ViewController.swift */,
+				CDCA415921CEC8E800B957AC /* LoginViewController.swift */,
 				CDCA415B21CEC8E800B957AC /* Main.storyboard */,
 				CDCA415E21CEC8EB00B957AC /* Assets.xcassets */,
 				CDCA416021CEC8EB00B957AC /* LaunchScreen.storyboard */,
@@ -240,6 +242,11 @@
 				TargetAttributes = {
 					CDCA415321CEC8E800B957AC = {
 						CreatedOnToolsVersion = 10.1;
+						SystemCapabilities = {
+							com.apple.Keychain = {
+								enabled = 1;
+							};
+						};
 					};
 					CDCA416721CEC8EB00B957AC = {
 						CreatedOnToolsVersion = 10.1;
@@ -375,14 +382,18 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-PostViewer/Pods-PostViewer-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
 			);
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -397,7 +408,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CDCA415A21CEC8E800B957AC /* ViewController.swift in Sources */,
+				CDCA415A21CEC8E800B957AC /* LoginViewController.swift in Sources */,
 				CDCA415821CEC8E800B957AC /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -574,6 +585,7 @@
 			baseConfigurationReference = 93C9FCE8B6A8AC1874B66591 /* Pods-PostViewer.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = PostViewer/PostViewer.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7W6E52TEYZ;
 				INFOPLIST_FILE = PostViewer/Info.plist;
@@ -593,6 +605,7 @@
 			baseConfigurationReference = 58ADCBF187BA9EC895B52452 /* Pods-PostViewer.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = PostViewer/PostViewer.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7W6E52TEYZ;
 				INFOPLIST_FILE = PostViewer/Info.plist;
