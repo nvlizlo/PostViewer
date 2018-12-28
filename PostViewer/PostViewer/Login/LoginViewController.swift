@@ -19,15 +19,19 @@ class LoginViewController: UIViewController {
         super.viewDidLoad()
     }
     
-    @IBAction func signUpButtonClicked(_ sender: Any) {
+    @IBAction func signInButtonClicked(_ sender: Any) {
         guard let email = emailTextField.text, let password = passwordTextField.text else {
             return
         }
-        Auth.auth().createUser(withEmail: email, password: password) { user, error in
-            if error == nil {
-                print("success")
-            }
+        Auth.auth().signIn(withEmail: email, password: password) { user, error in
+            
         }
+    }
+    
+    @IBAction func signUpButtonClicked(_ sender: Any) {
+        let storyboard = UIStoryboard.init(name: "Main", bundle: nil)
+        let signUpViewController = storyboard.instantiateViewController(withIdentifier: String(describing: SignUpViewController.self))
+        navigationController?.show(signUpViewController, sender: self)
     }
     
 }
