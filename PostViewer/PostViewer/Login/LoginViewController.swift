@@ -15,6 +15,7 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
     
+    //MARK:
     override func viewDidLoad() {
         super.viewDidLoad()
     }
@@ -24,7 +25,7 @@ class LoginViewController: UIViewController {
             return
         }
         Auth.auth().signIn(withEmail: email, password: password) { user, error in
-            
+            //go to posts...
         }
     }
     
