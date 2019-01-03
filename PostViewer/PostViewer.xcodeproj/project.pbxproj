@@ -17,6 +17,8 @@
 		CDCA416D21CEC8EB00B957AC /* PostViewerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDCA416C21CEC8EB00B957AC /* PostViewerTests.swift */; };
 		CDCA417821CEC8EB00B957AC /* PostViewerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDCA417721CEC8EB00B957AC /* PostViewerUITests.swift */; };
 		CDCA418621CECC2500B957AC /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CDCA418521CECC2500B957AC /* GoogleService-Info.plist */; };
+		CDFF75D421DD7EEB00027206 /* UITextField+textSpacer.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDFF75D321DD7EEB00027206 /* UITextField+textSpacer.swift */; };
+		CDFF75D721DD83DA00027206 /* RoundedTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDFF75D621DD83DA00027206 /* RoundedTextField.swift */; };
 		D62C1D2164596B0790459BCE /* Pods_PostViewerUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A88030336DE63155693B8E4E /* Pods_PostViewerUITests.framework */; };
 		E2128BBD21DCD8E4000F8CB7 /* UIView+layerProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2128BBC21DCD8E4000F8CB7 /* UIView+layerProperties.swift */; };
 		E2143C8A21D6604D005738A9 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2143C8921D6604D005738A9 /* SignUpViewController.swift */; };
@@ -63,6 +65,8 @@
 		CDCA417921CEC8EB00B957AC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CDCA418521CECC2500B957AC /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		CDFF75D221D59C2400027206 /* PostViewer.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = PostViewer.entitlements; sourceTree = "<group>"; };
+		CDFF75D321DD7EEB00027206 /* UITextField+textSpacer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+textSpacer.swift"; sourceTree = "<group>"; };
+		CDFF75D621DD83DA00027206 /* RoundedTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedTextField.swift; sourceTree = "<group>"; };
 		E2128BBC21DCD8E4000F8CB7 /* UIView+layerProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+layerProperties.swift"; sourceTree = "<group>"; };
 		E2143C8921D6604D005738A9 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		EC81625923CA5C5204FBAB48 /* Pods-PostViewerTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PostViewerTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-PostViewerTests/Pods-PostViewerTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -163,6 +167,14 @@
 			path = PostViewerUITests;
 			sourceTree = "<group>";
 		};
+		CDFF75D521DD802700027206 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				CDFF75D621DD83DA00027206 /* RoundedTextField.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		CF5AA33B7E9FA23DB46C3505 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -187,6 +199,7 @@
 		E2143C8821D66029005738A9 /* SignUp */ = {
 			isa = PBXGroup;
 			children = (
+				CDFF75D521DD802700027206 /* View */,
 				E2143C8921D6604D005738A9 /* SignUpViewController.swift */,
 			);
 			path = SignUp;
@@ -196,6 +209,7 @@
 			isa = PBXGroup;
 			children = (
 				E2128BBC21DCD8E4000F8CB7 /* UIView+layerProperties.swift */,
+				CDFF75D321DD7EEB00027206 /* UITextField+textSpacer.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -439,6 +453,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				E2143C8A21D6604D005738A9 /* SignUpViewController.swift in Sources */,
+				CDFF75D721DD83DA00027206 /* RoundedTextField.swift in Sources */,
+				CDFF75D421DD7EEB00027206 /* UITextField+textSpacer.swift in Sources */,
 				E2128BBD21DCD8E4000F8CB7 /* UIView+layerProperties.swift in Sources */,
 				CDCA415A21CEC8E800B957AC /* LoginViewController.swift in Sources */,
 				CDCA415821CEC8E800B957AC /* AppDelegate.swift in Sources */,
