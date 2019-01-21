@@ -15,17 +15,22 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
     
-    //MARK:
+    //MARK: ViewController Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
     }
     
+    //MARK: IBActions
     @IBAction func signInButtonClicked(_ sender: Any) {
         guard let email = emailTextField.text, let password = passwordTextField.text else {
             return
         }
-        Auth.auth().signIn(withEmail: email, password: password) { user, error in
-            //go to posts...
+        Auth.auth().signIn(withEmail: email, password: password) { [weak self] user, error in
+            if error == nil {
+                let storyboard = UIStoryboard.init(name: "Main", bundle: nil)
+                let postsViewController = storyboard.instantiateViewController(withIdentifier: String(describing: PostsViewController.self))
+                self?.navigationController?.show(postsViewController, sender: self)
+            }
         }
     }
     

@@ -28,16 +28,18 @@ class SignUpViewController: UIViewController {
             return
         }
         if password == repeatPassword {
-            Auth.auth().createUser(withEmail: email, password: password) { dataResult, error in
+            Auth.auth().createUser(withEmail: email, password: password) { [weak self] dataResult, error in
                 guard let user = dataResult?.user, error == nil else {
                     return
                 }
                 let changeRequest = user.createProfileChangeRequest()
-                changeRequest.displayName = self.nameTextField.text
+                changeRequest.displayName = self?.nameTextField.text
                 changeRequest.commitChanges { error in
                     print("error")
                 }
-                //go to posts...
+                let storyboard = UIStoryboard.init(name: "Main", bundle: nil)
+                let postsViewController = storyboard.instantiateViewController(withIdentifier: String(describing: PostsViewController.self))
+                self?.navigationController?.show(postsViewController, sender: self)
             }
         }
     }

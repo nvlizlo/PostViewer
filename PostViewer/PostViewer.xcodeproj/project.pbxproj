@@ -17,8 +17,23 @@
 		CDCA416D21CEC8EB00B957AC /* PostViewerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDCA416C21CEC8EB00B957AC /* PostViewerTests.swift */; };
 		CDCA417821CEC8EB00B957AC /* PostViewerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDCA417721CEC8EB00B957AC /* PostViewerUITests.swift */; };
 		CDCA418621CECC2500B957AC /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CDCA418521CECC2500B957AC /* GoogleService-Info.plist */; };
+		CDFC73D921F4EADA00219FA8 /* UITableViewCell+Reusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDFC73D821F4EADA00219FA8 /* UITableViewCell+Reusable.swift */; };
+		CDFC73DB21F4EC2E00219FA8 /* PostTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CDFC73DA21F4EC2E00219FA8 /* PostTableViewCell.xib */; };
+		CDFC73E921F5254800219FA8 /* Nunito-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CDFC73E021F5254800219FA8 /* Nunito-Medium.ttf */; };
+		CDFC73EA21F5254800219FA8 /* SIL Open Font License.txt in Resources */ = {isa = PBXBuildFile; fileRef = CDFC73E121F5254800219FA8 /* SIL Open Font License.txt */; };
+		CDFC73EB21F5254800219FA8 /* Nunito-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CDFC73E221F5254800219FA8 /* Nunito-ExtraBold.ttf */; };
+		CDFC73EC21F5254800219FA8 /* Nunito-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CDFC73E321F5254800219FA8 /* Nunito-Light.ttf */; };
+		CDFC73ED21F5254800219FA8 /* Nunito-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CDFC73E421F5254800219FA8 /* Nunito-Regular.ttf */; };
+		CDFC73EE21F5254800219FA8 /* Nunito-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CDFC73E521F5254800219FA8 /* Nunito-SemiBold.ttf */; };
+		CDFC73EF21F5254800219FA8 /* Nunito-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CDFC73E621F5254800219FA8 /* Nunito-Bold.ttf */; };
+		CDFC73F021F5254800219FA8 /* Nunito-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CDFC73E721F5254800219FA8 /* Nunito-Black.ttf */; };
+		CDFC73F121F5254800219FA8 /* Nunito-ExtraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CDFC73E821F5254800219FA8 /* Nunito-ExtraLight.ttf */; };
 		CDFF75D421DD7EEB00027206 /* UITextField+textSpacer.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDFF75D321DD7EEB00027206 /* UITextField+textSpacer.swift */; };
 		CDFF75D721DD83DA00027206 /* RoundedTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDFF75D621DD83DA00027206 /* RoundedTextField.swift */; };
+		CDFF75DA21E3762200027206 /* PostsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDFF75D921E3762200027206 /* PostsViewController.swift */; };
+		CDFF75DC21E3763900027206 /* PostsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDFF75DB21E3763900027206 /* PostsPresenter.swift */; };
+		CDFF75E021E3794F00027206 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDFF75DF21E3794F00027206 /* Post.swift */; };
+		CDFF75E221E37A9C00027206 /* PostTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDFF75E121E37A9C00027206 /* PostTableViewCell.swift */; };
 		D62C1D2164596B0790459BCE /* Pods_PostViewerUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A88030336DE63155693B8E4E /* Pods_PostViewerUITests.framework */; };
 		E2128BBD21DCD8E4000F8CB7 /* UIView+layerProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2128BBC21DCD8E4000F8CB7 /* UIView+layerProperties.swift */; };
 		E2143C8A21D6604D005738A9 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2143C8921D6604D005738A9 /* SignUpViewController.swift */; };
@@ -64,9 +79,24 @@
 		CDCA417721CEC8EB00B957AC /* PostViewerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostViewerUITests.swift; sourceTree = "<group>"; };
 		CDCA417921CEC8EB00B957AC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CDCA418521CECC2500B957AC /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		CDFC73D821F4EADA00219FA8 /* UITableViewCell+Reusable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableViewCell+Reusable.swift"; sourceTree = "<group>"; };
+		CDFC73DA21F4EC2E00219FA8 /* PostTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PostTableViewCell.xib; sourceTree = "<group>"; };
+		CDFC73E021F5254800219FA8 /* Nunito-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Nunito-Medium.ttf"; sourceTree = "<group>"; };
+		CDFC73E121F5254800219FA8 /* SIL Open Font License.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "SIL Open Font License.txt"; sourceTree = "<group>"; };
+		CDFC73E221F5254800219FA8 /* Nunito-ExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Nunito-ExtraBold.ttf"; sourceTree = "<group>"; };
+		CDFC73E321F5254800219FA8 /* Nunito-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Nunito-Light.ttf"; sourceTree = "<group>"; };
+		CDFC73E421F5254800219FA8 /* Nunito-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Nunito-Regular.ttf"; sourceTree = "<group>"; };
+		CDFC73E521F5254800219FA8 /* Nunito-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Nunito-SemiBold.ttf"; sourceTree = "<group>"; };
+		CDFC73E621F5254800219FA8 /* Nunito-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Nunito-Bold.ttf"; sourceTree = "<group>"; };
+		CDFC73E721F5254800219FA8 /* Nunito-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Nunito-Black.ttf"; sourceTree = "<group>"; };
+		CDFC73E821F5254800219FA8 /* Nunito-ExtraLight.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Nunito-ExtraLight.ttf"; sourceTree = "<group>"; };
 		CDFF75D221D59C2400027206 /* PostViewer.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = PostViewer.entitlements; sourceTree = "<group>"; };
 		CDFF75D321DD7EEB00027206 /* UITextField+textSpacer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+textSpacer.swift"; sourceTree = "<group>"; };
 		CDFF75D621DD83DA00027206 /* RoundedTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedTextField.swift; sourceTree = "<group>"; };
+		CDFF75D921E3762200027206 /* PostsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsViewController.swift; sourceTree = "<group>"; };
+		CDFF75DB21E3763900027206 /* PostsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsPresenter.swift; sourceTree = "<group>"; };
+		CDFF75DF21E3794F00027206 /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
+		CDFF75E121E37A9C00027206 /* PostTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostTableViewCell.swift; sourceTree = "<group>"; };
 		E2128BBC21DCD8E4000F8CB7 /* UIView+layerProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+layerProperties.swift"; sourceTree = "<group>"; };
 		E2143C8921D6604D005738A9 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		EC81625923CA5C5204FBAB48 /* Pods-PostViewerTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PostViewerTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-PostViewerTests/Pods-PostViewerTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -135,13 +165,14 @@
 		CDCA415621CEC8E800B957AC /* PostViewer */ = {
 			isa = PBXGroup;
 			children = (
+				CDFC73DC21F524F100219FA8 /* Supporting files */,
+				CDFF75D821E3760600027206 /* Posts */,
 				E294C57421D664790044F650 /* Extensions */,
 				E2143C8821D66029005738A9 /* SignUp */,
 				E2143C8721D66020005738A9 /* Login */,
 				CDFF75D221D59C2400027206 /* PostViewer.entitlements */,
 				CDCA415721CEC8E800B957AC /* AppDelegate.swift */,
 				CDCA415B21CEC8E800B957AC /* Main.storyboard */,
-				CDCA415E21CEC8EB00B957AC /* Assets.xcassets */,
 				CDCA416021CEC8EB00B957AC /* LaunchScreen.storyboard */,
 				CDCA416321CEC8EB00B957AC /* Info.plist */,
 				CDCA418521CECC2500B957AC /* GoogleService-Info.plist */,
@@ -167,12 +198,73 @@
 			path = PostViewerUITests;
 			sourceTree = "<group>";
 		};
+		CDFC73DC21F524F100219FA8 /* Supporting files */ = {
+			isa = PBXGroup;
+			children = (
+				CDFC73DD21F5250200219FA8 /* Fonts */,
+				CDCA415E21CEC8EB00B957AC /* Assets.xcassets */,
+			);
+			path = "Supporting files";
+			sourceTree = "<group>";
+		};
+		CDFC73DD21F5250200219FA8 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				CDFC73DF21F5254800219FA8 /* Nunito */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		CDFC73DF21F5254800219FA8 /* Nunito */ = {
+			isa = PBXGroup;
+			children = (
+				CDFC73E021F5254800219FA8 /* Nunito-Medium.ttf */,
+				CDFC73E121F5254800219FA8 /* SIL Open Font License.txt */,
+				CDFC73E221F5254800219FA8 /* Nunito-ExtraBold.ttf */,
+				CDFC73E321F5254800219FA8 /* Nunito-Light.ttf */,
+				CDFC73E421F5254800219FA8 /* Nunito-Regular.ttf */,
+				CDFC73E521F5254800219FA8 /* Nunito-SemiBold.ttf */,
+				CDFC73E621F5254800219FA8 /* Nunito-Bold.ttf */,
+				CDFC73E721F5254800219FA8 /* Nunito-Black.ttf */,
+				CDFC73E821F5254800219FA8 /* Nunito-ExtraLight.ttf */,
+			);
+			path = Nunito;
+			sourceTree = "<group>";
+		};
 		CDFF75D521DD802700027206 /* View */ = {
 			isa = PBXGroup;
 			children = (
 				CDFF75D621DD83DA00027206 /* RoundedTextField.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		CDFF75D821E3760600027206 /* Posts */ = {
+			isa = PBXGroup;
+			children = (
+				CDFF75DE21E3781400027206 /* Model */,
+				CDFF75DD21E3780B00027206 /* View */,
+				CDFF75D921E3762200027206 /* PostsViewController.swift */,
+				CDFF75DB21E3763900027206 /* PostsPresenter.swift */,
+			);
+			path = Posts;
+			sourceTree = "<group>";
+		};
+		CDFF75DD21E3780B00027206 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				CDFF75E121E37A9C00027206 /* PostTableViewCell.swift */,
+				CDFC73DA21F4EC2E00219FA8 /* PostTableViewCell.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		CDFF75DE21E3781400027206 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				CDFF75DF21E3794F00027206 /* Post.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		CF5AA33B7E9FA23DB46C3505 /* Pods */ = {
@@ -210,6 +302,7 @@
 			children = (
 				E2128BBC21DCD8E4000F8CB7 /* UIView+layerProperties.swift */,
 				CDFF75D321DD7EEB00027206 /* UITextField+textSpacer.swift */,
+				CDFC73D821F4EADA00219FA8 /* UITableViewCell+Reusable.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -327,10 +420,20 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CDFC73ED21F5254800219FA8 /* Nunito-Regular.ttf in Resources */,
+				CDFC73F121F5254800219FA8 /* Nunito-ExtraLight.ttf in Resources */,
+				CDFC73EA21F5254800219FA8 /* SIL Open Font License.txt in Resources */,
 				CDCA416221CEC8EB00B957AC /* LaunchScreen.storyboard in Resources */,
+				CDFC73EC21F5254800219FA8 /* Nunito-Light.ttf in Resources */,
+				CDFC73DB21F4EC2E00219FA8 /* PostTableViewCell.xib in Resources */,
+				CDFC73EE21F5254800219FA8 /* Nunito-SemiBold.ttf in Resources */,
+				CDFC73E921F5254800219FA8 /* Nunito-Medium.ttf in Resources */,
 				CDCA418621CECC2500B957AC /* GoogleService-Info.plist in Resources */,
 				CDCA415F21CEC8EB00B957AC /* Assets.xcassets in Resources */,
+				CDFC73F021F5254800219FA8 /* Nunito-Black.ttf in Resources */,
 				CDCA415D21CEC8E800B957AC /* Main.storyboard in Resources */,
+				CDFC73EF21F5254800219FA8 /* Nunito-Bold.ttf in Resources */,
+				CDFC73EB21F5254800219FA8 /* Nunito-ExtraBold.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -452,11 +555,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CDFF75DC21E3763900027206 /* PostsPresenter.swift in Sources */,
+				CDFF75DA21E3762200027206 /* PostsViewController.swift in Sources */,
 				E2143C8A21D6604D005738A9 /* SignUpViewController.swift in Sources */,
 				CDFF75D721DD83DA00027206 /* RoundedTextField.swift in Sources */,
 				CDFF75D421DD7EEB00027206 /* UITextField+textSpacer.swift in Sources */,
 				E2128BBD21DCD8E4000F8CB7 /* UIView+layerProperties.swift in Sources */,
+				CDFF75E021E3794F00027206 /* Post.swift in Sources */,
+				CDFF75E221E37A9C00027206 /* PostTableViewCell.swift in Sources */,
 				CDCA415A21CEC8E800B957AC /* LoginViewController.swift in Sources */,
+				CDFC73D921F4EADA00219FA8 /* UITableViewCell+Reusable.swift in Sources */,
 				CDCA415821CEC8E800B957AC /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -644,7 +752,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = nvlizlo.PostViewer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -664,7 +772,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = nvlizlo.PostViewer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
