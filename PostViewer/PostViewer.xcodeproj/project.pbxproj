@@ -28,6 +28,8 @@
 		CDFC73EF21F5254800219FA8 /* Nunito-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CDFC73E621F5254800219FA8 /* Nunito-Bold.ttf */; };
 		CDFC73F021F5254800219FA8 /* Nunito-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CDFC73E721F5254800219FA8 /* Nunito-Black.ttf */; };
 		CDFC73F121F5254800219FA8 /* Nunito-ExtraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CDFC73E821F5254800219FA8 /* Nunito-ExtraLight.ttf */; };
+		CDFC73F721F68D5600219FA8 /* EditPostAlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDFC73F521F68D5600219FA8 /* EditPostAlertViewController.swift */; };
+		CDFC73F821F68D5600219FA8 /* EditPostAlertViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CDFC73F621F68D5600219FA8 /* EditPostAlertViewController.xib */; };
 		CDFF75D421DD7EEB00027206 /* UITextField+textSpacer.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDFF75D321DD7EEB00027206 /* UITextField+textSpacer.swift */; };
 		CDFF75D721DD83DA00027206 /* RoundedTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDFF75D621DD83DA00027206 /* RoundedTextField.swift */; };
 		CDFF75DA21E3762200027206 /* PostsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDFF75D921E3762200027206 /* PostsViewController.swift */; };
@@ -90,6 +92,8 @@
 		CDFC73E621F5254800219FA8 /* Nunito-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Nunito-Bold.ttf"; sourceTree = "<group>"; };
 		CDFC73E721F5254800219FA8 /* Nunito-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Nunito-Black.ttf"; sourceTree = "<group>"; };
 		CDFC73E821F5254800219FA8 /* Nunito-ExtraLight.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Nunito-ExtraLight.ttf"; sourceTree = "<group>"; };
+		CDFC73F521F68D5600219FA8 /* EditPostAlertViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditPostAlertViewController.swift; sourceTree = "<group>"; };
+		CDFC73F621F68D5600219FA8 /* EditPostAlertViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EditPostAlertViewController.xib; sourceTree = "<group>"; };
 		CDFF75D221D59C2400027206 /* PostViewer.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = PostViewer.entitlements; sourceTree = "<group>"; };
 		CDFF75D321DD7EEB00027206 /* UITextField+textSpacer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+textSpacer.swift"; sourceTree = "<group>"; };
 		CDFF75D621DD83DA00027206 /* RoundedTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedTextField.swift; sourceTree = "<group>"; };
@@ -231,6 +235,24 @@
 			path = Nunito;
 			sourceTree = "<group>";
 		};
+		CDFC73F321F687E800219FA8 /* PostTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				CDFF75E121E37A9C00027206 /* PostTableViewCell.swift */,
+				CDFC73DA21F4EC2E00219FA8 /* PostTableViewCell.xib */,
+			);
+			path = PostTableViewCell;
+			sourceTree = "<group>";
+		};
+		CDFC73F421F687F700219FA8 /* EditPostAlertView */ = {
+			isa = PBXGroup;
+			children = (
+				CDFC73F521F68D5600219FA8 /* EditPostAlertViewController.swift */,
+				CDFC73F621F68D5600219FA8 /* EditPostAlertViewController.xib */,
+			);
+			path = EditPostAlertView;
+			sourceTree = "<group>";
+		};
 		CDFF75D521DD802700027206 /* View */ = {
 			isa = PBXGroup;
 			children = (
@@ -253,8 +275,8 @@
 		CDFF75DD21E3780B00027206 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				CDFF75E121E37A9C00027206 /* PostTableViewCell.swift */,
-				CDFC73DA21F4EC2E00219FA8 /* PostTableViewCell.xib */,
+				CDFC73F421F687F700219FA8 /* EditPostAlertView */,
+				CDFC73F321F687E800219FA8 /* PostTableViewCell */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -422,6 +444,7 @@
 			files = (
 				CDFC73ED21F5254800219FA8 /* Nunito-Regular.ttf in Resources */,
 				CDFC73F121F5254800219FA8 /* Nunito-ExtraLight.ttf in Resources */,
+				CDFC73F821F68D5600219FA8 /* EditPostAlertViewController.xib in Resources */,
 				CDFC73EA21F5254800219FA8 /* SIL Open Font License.txt in Resources */,
 				CDCA416221CEC8EB00B957AC /* LaunchScreen.storyboard in Resources */,
 				CDFC73EC21F5254800219FA8 /* Nunito-Light.ttf in Resources */,
@@ -564,6 +587,7 @@
 				CDFF75E021E3794F00027206 /* Post.swift in Sources */,
 				CDFF75E221E37A9C00027206 /* PostTableViewCell.swift in Sources */,
 				CDCA415A21CEC8E800B957AC /* LoginViewController.swift in Sources */,
+				CDFC73F721F68D5600219FA8 /* EditPostAlertViewController.swift in Sources */,
 				CDFC73D921F4EADA00219FA8 /* UITableViewCell+Reusable.swift in Sources */,
 				CDCA415821CEC8E800B957AC /* AppDelegate.swift in Sources */,
 			);

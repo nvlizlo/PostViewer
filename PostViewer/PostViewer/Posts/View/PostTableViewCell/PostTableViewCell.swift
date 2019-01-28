@@ -18,6 +18,15 @@ class PostTableViewCell: UITableViewCell, Reusable {
     @IBOutlet private weak var deletePostButton: UIButton!
     @IBOutlet private weak var editPostButton: UIButton!
     
+    var postText: String {
+        set {
+            messageTextView.text = newValue
+        }
+        
+        get {
+            return messageTextView.text
+        }
+    }
     var editButtonClosure: VoidClosure?
     var deleteButtonClosure: VoidClosure?
     
