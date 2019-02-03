@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		4B4DC642AB53896D2E12A7AD /* Pods_PostViewer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E234D77D6EC6A9A62753F8E /* Pods_PostViewer.framework */; };
 		6696919D030A12661645B82F /* Pods_PostViewerTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7D7C09F18F28359ED768E68 /* Pods_PostViewerTests.framework */; };
+		CD14AE1B220753EB004ADF87 /* UIStoryboard+Idenitifer.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD14AE1A220753EB004ADF87 /* UIStoryboard+Idenitifer.swift */; };
+		CD14AE1D220766D9004ADF87 /* LoginPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD14AE1C220766D9004ADF87 /* LoginPresenter.swift */; };
 		CDCA415821CEC8E800B957AC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDCA415721CEC8E800B957AC /* AppDelegate.swift */; };
 		CDCA415A21CEC8E800B957AC /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDCA415921CEC8E800B957AC /* LoginViewController.swift */; };
 		CDCA415D21CEC8E800B957AC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CDCA415B21CEC8E800B957AC /* Main.storyboard */; };
@@ -67,6 +69,8 @@
 		93C9FCE8B6A8AC1874B66591 /* Pods-PostViewer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PostViewer.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PostViewer/Pods-PostViewer.debug.xcconfig"; sourceTree = "<group>"; };
 		A7D7C09F18F28359ED768E68 /* Pods_PostViewerTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PostViewerTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A88030336DE63155693B8E4E /* Pods_PostViewerUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PostViewerUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CD14AE1A220753EB004ADF87 /* UIStoryboard+Idenitifer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIStoryboard+Idenitifer.swift"; sourceTree = "<group>"; };
+		CD14AE1C220766D9004ADF87 /* LoginPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPresenter.swift; sourceTree = "<group>"; };
 		CDCA415421CEC8E800B957AC /* PostViewer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PostViewer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CDCA415721CEC8E800B957AC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CDCA415921CEC8E800B957AC /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -314,6 +318,7 @@
 			isa = PBXGroup;
 			children = (
 				CDCA415921CEC8E800B957AC /* LoginViewController.swift */,
+				CD14AE1C220766D9004ADF87 /* LoginPresenter.swift */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -333,6 +338,7 @@
 				E2128BBC21DCD8E4000F8CB7 /* UIView+layerProperties.swift */,
 				CDFF75D321DD7EEB00027206 /* UITextField+textSpacer.swift */,
 				CDFC73D821F4EADA00219FA8 /* UITableViewCell+Reusable.swift */,
+				CD14AE1A220753EB004ADF87 /* UIStoryboard+Idenitifer.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -588,6 +594,7 @@
 			files = (
 				CDFF75DC21E3763900027206 /* PostsPresenter.swift in Sources */,
 				CDFF75DA21E3762200027206 /* PostsViewController.swift in Sources */,
+				CD14AE1D220766D9004ADF87 /* LoginPresenter.swift in Sources */,
 				E2143C8A21D6604D005738A9 /* SignUpViewController.swift in Sources */,
 				CDFF75D721DD83DA00027206 /* RoundedTextField.swift in Sources */,
 				CDFF75D421DD7EEB00027206 /* UITextField+textSpacer.swift in Sources */,
@@ -597,6 +604,7 @@
 				CDCA415A21CEC8E800B957AC /* LoginViewController.swift in Sources */,
 				CDFC73F721F68D5600219FA8 /* EditPostAlertViewController.swift in Sources */,
 				CDFC73D921F4EADA00219FA8 /* UITableViewCell+Reusable.swift in Sources */,
+				CD14AE1B220753EB004ADF87 /* UIStoryboard+Idenitifer.swift in Sources */,
 				CDCA415821CEC8E800B957AC /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
