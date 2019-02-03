@@ -12,12 +12,15 @@ import Firebase
 class LoginViewController: UIViewController {
     
     //MARK: IBOutlets
-    @IBOutlet weak var emailTextField: UITextField!
-    @IBOutlet weak var passwordTextField: UITextField!
+    @IBOutlet private weak var emailTextField: UITextField!
+    @IBOutlet private weak var passwordTextField: UITextField!
+    
+    var textFields = [UITextField]()
     
     //MARK: ViewController Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
+        textFields = [emailTextField, passwordTextField]
     }
     
     //MARK: IBActions
@@ -40,5 +43,15 @@ class LoginViewController: UIViewController {
         navigationController?.show(signUpViewController, sender: self)
     }
     
+}
+
+extension LoginViewController: UITextFieldDelegate {
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        let index = textFields.firstIndex(of: textField)
+        if index! < textFields.count - 1 {
+            textFields[index! + 1].becomeFirstResponder()
+        }
+        return true
+    }
 }
 

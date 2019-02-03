@@ -144,6 +144,13 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		CD14AE1922072F15004ADF87 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
 		CDCA414B21CEC8E800B957AC = {
 			isa = PBXGroup;
 			children = (
@@ -169,6 +176,7 @@
 		CDCA415621CEC8E800B957AC /* PostViewer */ = {
 			isa = PBXGroup;
 			children = (
+				CD14AE1922072F15004ADF87 /* Services */,
 				CDFC73DC21F524F100219FA8 /* Supporting files */,
 				CDFF75D821E3760600027206 /* Posts */,
 				E294C57421D664790044F650 /* Extensions */,
