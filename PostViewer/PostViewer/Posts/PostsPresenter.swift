@@ -21,15 +21,24 @@ class PostsPresenter {
     func loadPosts() {
         let ref = Database.database().reference(withPath: "posts")
         
-        ref.observe(.value) { snapshot in
+        ref.queryOrdered(byChild: "text").observe(.value) { snapshot in
+            var posts = [Post]()
             for child in snapshot.children {
                 if let snaphot = child as? DataSnapshot {
                     let post = Post(snapshot: snaphot)
-                    self.posts.append(post!)
+                    posts.append(post!)
                 }
             }
+            self.posts = posts
             self.presentable?.updateView()
         }
+    }
+    
+    func addPost(postText: String) {
+        let ref = Database.database().reference(withPath: "posts")
+        let post = Post(text: postText, dateCreated: Date())
+        let postRef = ref.child(postText)
+        postRef.setValue(post.toAnyObject())
     }
     
     func numberOfPosts() -> Int {

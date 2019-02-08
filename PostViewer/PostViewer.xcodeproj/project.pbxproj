@@ -11,6 +11,7 @@
 		6696919D030A12661645B82F /* Pods_PostViewerTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7D7C09F18F28359ED768E68 /* Pods_PostViewerTests.framework */; };
 		CD14AE1B220753EB004ADF87 /* UIStoryboard+Idenitifer.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD14AE1A220753EB004ADF87 /* UIStoryboard+Idenitifer.swift */; };
 		CD14AE1D220766D9004ADF87 /* LoginPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD14AE1C220766D9004ADF87 /* LoginPresenter.swift */; };
+		CD14AE212207A913004ADF87 /* FirebaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD14AE202207A913004ADF87 /* FirebaseService.swift */; };
 		CDCA415821CEC8E800B957AC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDCA415721CEC8E800B957AC /* AppDelegate.swift */; };
 		CDCA415A21CEC8E800B957AC /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDCA415921CEC8E800B957AC /* LoginViewController.swift */; };
 		CDCA415D21CEC8E800B957AC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CDCA415B21CEC8E800B957AC /* Main.storyboard */; };
@@ -71,6 +72,7 @@
 		A88030336DE63155693B8E4E /* Pods_PostViewerUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PostViewerUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CD14AE1A220753EB004ADF87 /* UIStoryboard+Idenitifer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIStoryboard+Idenitifer.swift"; sourceTree = "<group>"; };
 		CD14AE1C220766D9004ADF87 /* LoginPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPresenter.swift; sourceTree = "<group>"; };
+		CD14AE202207A913004ADF87 /* FirebaseService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseService.swift; sourceTree = "<group>"; };
 		CDCA415421CEC8E800B957AC /* PostViewer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PostViewer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CDCA415721CEC8E800B957AC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CDCA415921CEC8E800B957AC /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -151,6 +153,7 @@
 		CD14AE1922072F15004ADF87 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				CD14AE202207A913004ADF87 /* FirebaseService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -593,6 +596,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CDFF75DC21E3763900027206 /* PostsPresenter.swift in Sources */,
+				CD14AE212207A913004ADF87 /* FirebaseService.swift in Sources */,
 				CDFF75DA21E3762200027206 /* PostsViewController.swift in Sources */,
 				CD14AE1D220766D9004ADF87 /* LoginPresenter.swift in Sources */,
 				E2143C8A21D6604D005738A9 /* SignUpViewController.swift in Sources */,

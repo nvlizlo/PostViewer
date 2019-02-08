@@ -40,10 +40,14 @@ class PostsViewController: UIViewController {
 
     //MARK: IBActions
     @objc func addPost() {
-        let postText = "first_post"
-        let post = Post(text: postText, dateCreated: Date())
-        let postRef = ref.child(postText)
-        postRef.setValue(post.toAnyObject())
+        let controller = EditPostAlertViewController(nibName: "EditPostAlertViewController", bundle: nil)
+        controller.modalTransitionStyle = .crossDissolve
+        controller.modalPresentationStyle = .overCurrentContext
+        controller.clos = { text in
+            self.presenter.addPost(postText: text)
+        }
+        
+        self.present(controller, animated: false)
     }
 }
 

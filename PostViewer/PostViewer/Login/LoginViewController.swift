@@ -46,6 +46,12 @@ class LoginViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         presenter = LoginPresenter(presentable: self)
+        Auth.auth().addStateDidChangeListener() { auth, user in
+            if user != nil {
+                self.showPosts()
+            }
+            
+        }
     }
     
     //MARK: IBActions
