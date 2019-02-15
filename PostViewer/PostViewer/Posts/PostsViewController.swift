@@ -7,10 +7,10 @@
 //
 
 import UIKit
-import Firebase
 
-protocol PostPresentable: class {
+protocol PostsView: class {
     func updateView()
+    func updatePostAt(index: Int)
 }
 
 class PostsViewController: UIViewController {
@@ -22,14 +22,12 @@ class PostsViewController: UIViewController {
         }
     }
     
-    var presenter: PostsPresenter!
-    let ref = Database.database().reference(withPath: "posts")
-    var posts = [Post]()
+    var presenter: PostsViewPresenter!
     
     //MARK: ViewController Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        presenter = PostsPresenter(presentable: self)
+        presenter = PostsPresenter(view: self)
         setupView()
     }
     
@@ -43,8 +41,8 @@ class PostsViewController: UIViewController {
         let controller = EditPostAlertViewController(nibName: "EditPostAlertViewController", bundle: nil)
         controller.modalTransitionStyle = .crossDissolve
         controller.modalPresentationStyle = .overCurrentContext
-        controller.clos = { text in
-            self.presenter.addPost(postText: text)
+        controller.clos = { [weak self] text in
+            self?.presenter.addPost(postText: text)
         }
         
         self.present(controller, animated: false)
@@ -67,7 +65,7 @@ extension PostsViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(indexPath: indexPath) as PostTableViewCell
         cell.postText = presenter.postAt(index: indexPath.row).text
-        cell.editButtonClosure = {
+        cell.editButtonClosure = { [weak self] in
             let controller = EditPostAlertViewController(nibName: "EditPostAlertViewController", bundle: nil)
             controller.modalTransitionStyle = .crossDissolve
             controller.modalPresentationStyle = .overCurrentContext
@@ -76,12 +74,13 @@ extension PostsViewController: UITableViewDataSource {
                 cell.postText = text
             }
             
-            self.present(controller, animated: false, completion: {
+            self?.present(controller, animated: false, completion: {
                 controller.postText = cell.postText
             })
         }
         
         cell.deleteButtonClosure = {
+            self.presenter.removePost()
             tableView.deleteRows(at: [indexPath], with: .fade)
         }
         return cell
@@ -92,8 +91,12 @@ extension PostsViewController: UITableViewDelegate {
     
 }
 
-extension PostsViewController: PostPresentable {
+extension PostsViewController: PostsView {
     func updateView() {
         tableView.reloadData()
+    }
+    
+    func updatePostAt(index: Int) {
+        tableView.reloadRows(at: [[0, index]], with: .fade)
     }
 }

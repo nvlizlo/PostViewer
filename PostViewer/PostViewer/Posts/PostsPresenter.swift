@@ -9,43 +9,45 @@
 import Foundation
 import Firebase
 
+protocol PostsViewPresenter: class {
+    func numberOfPosts() -> Int
+    func postAt(index: Int) -> Post
+    func loadPosts()
+    func addPost(postText: String)
+    func removePost()
+}
+
 class PostsPresenter {
     private var posts: [Post]
-    weak var presentable: PostPresentable?
+    private weak var view: PostsView?
     
-    init(presentable: PostPresentable) {
-        self.presentable = presentable
+    init(view: PostsView) {
+        self.view = view
         self.posts = [Post]()
     }
-    
-    func loadPosts() {
-        let ref = Database.database().reference(withPath: "posts")
-        
-        ref.queryOrdered(byChild: "text").observe(.value) { snapshot in
-            var posts = [Post]()
-            for child in snapshot.children {
-                if let snaphot = child as? DataSnapshot {
-                    let post = Post(snapshot: snaphot)
-                    posts.append(post!)
-                }
-            }
-            self.posts = posts
-            self.presentable?.updateView()
-        }
-    }
-    
-    func addPost(postText: String) {
-        let ref = Database.database().reference(withPath: "posts")
-        let post = Post(text: postText, dateCreated: Date())
-        let postRef = ref.child(postText)
-        postRef.setValue(post.toAnyObject())
-    }
-    
+}
+
+extension PostsPresenter: PostsViewPresenter {
     func numberOfPosts() -> Int {
         return posts.count
     }
     
     func postAt(index: Int) -> Post {
         return posts[index]
+    }
+    
+    func loadPosts() {
+        FirebaseService<Post>().loadItems(FirebaseService.Item.posts, orderedBy: Post.Keys.text) { items in
+            self.posts = items
+            self.view?.updateView()
+        }
+    }
+    
+    func addPost(postText: String) {
+        FirebaseService<Post>().addItem(FirebaseService.Item.posts, postText: postText)
+    }
+    
+    func removePost() {
+        
     }
 }
