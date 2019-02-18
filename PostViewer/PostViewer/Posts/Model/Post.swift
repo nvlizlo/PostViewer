@@ -10,6 +10,7 @@ import Foundation
 import Firebase
 
 protocol DataSnapshotable {
+    var databaseReference: DatabaseReference? { get }
     init?(dataSnapshot: DataSnapshot)
 }
 
@@ -22,6 +23,8 @@ struct Post {
     
     let text: String
     let dateCreated: Date
+    
+    var databaseReference: DatabaseReference?
     
     static var dateFormatter: DateFormatter {
         let dateFormatter = DateFormatter()
@@ -43,6 +46,7 @@ struct Post {
 }
 
 extension Post: DataSnapshotable {
+
     init?(dataSnapshot: DataSnapshot) {
         if let value = dataSnapshot.value as? [String: AnyObject],
             let text = value[Keys.text] as? String,
@@ -50,8 +54,11 @@ extension Post: DataSnapshotable {
             let dateCreated = Post.dateFormatter.date(from: dateString) {
             self.text = text
             self.dateCreated = dateCreated
+            self.databaseReference = dataSnapshot.ref
         } else {
             return nil
         }
     }
 }
+
+

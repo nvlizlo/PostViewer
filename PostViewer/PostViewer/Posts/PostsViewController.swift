@@ -11,6 +11,7 @@ import UIKit
 protocol PostsView: class {
     func updateView()
     func updatePostAt(index: Int)
+    func deletePost(index: Int)
 }
 
 class PostsViewController: UIViewController {
@@ -71,17 +72,16 @@ extension PostsViewController: UITableViewDataSource {
             controller.modalPresentationStyle = .overCurrentContext
             
             controller.clos = { text in
-                cell.postText = text
+                self?.presenter.updatePost(postText: text, index: indexPath.row)
             }
             
-            self?.present(controller, animated: false, completion: {
+            self?.present(controller, animated: false) {
                 controller.postText = cell.postText
-            })
+            }
         }
         
         cell.deleteButtonClosure = {
-            self.presenter.removePost()
-            tableView.deleteRows(at: [indexPath], with: .fade)
+            self.presenter.removePost(index: indexPath.row)
         }
         return cell
     }
@@ -98,5 +98,9 @@ extension PostsViewController: PostsView {
     
     func updatePostAt(index: Int) {
         tableView.reloadRows(at: [[0, index]], with: .fade)
+    }
+    
+    func deletePost(index: Int) {
+        tableView.deleteRows(at: [[0, index]], with: .fade)
     }
 }

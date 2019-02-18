@@ -38,4 +38,12 @@ class FirebaseService<T: DataSnapshotable> {
         let postRef = ref.child(postText)
         postRef.setValue(post.toAnyObject())
     }
+    
+    func removeItem(_ item: DataSnapshotable) {
+        item.databaseReference?.removeValue()
+    }
+    
+    func updateItem(_ item: DataSnapshotable, values: [AnyHashable: Any]) {
+        item.databaseReference?.updateChildValues(values)
+    }
 }

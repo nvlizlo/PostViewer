@@ -13,8 +13,10 @@ protocol PostsViewPresenter: class {
     func numberOfPosts() -> Int
     func postAt(index: Int) -> Post
     func loadPosts()
+    
     func addPost(postText: String)
-    func removePost()
+    func removePost(index: Int)
+    func updatePost(postText:String, index: Int)
 }
 
 class PostsPresenter {
@@ -47,7 +49,15 @@ extension PostsPresenter: PostsViewPresenter {
         FirebaseService<Post>().addItem(FirebaseService.Item.posts, postText: postText)
     }
     
-    func removePost() {
-        
+    func removePost(index: Int) {
+        let deletedPost = postAt(index: index)
+        FirebaseService<Post>().removeItem(deletedPost)
+        view?.updatePostAt(index: index)
+    }
+    
+    func updatePost(postText: String, index: Int) {
+        let updatedPost = postAt(index: index)
+        FirebaseService<Post>().updateItem(updatedPost, values: [Post.Keys.text: postText])
+        view?.updatePostAt(index: index)
     }
 }
