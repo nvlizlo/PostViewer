@@ -23,7 +23,7 @@ class EditPostAlertViewController: UIViewController {
         }
     }
     
-    var clos: ((String) -> Void)?
+    var clos: ((String?) -> Void)?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -35,7 +35,9 @@ class EditPostAlertViewController: UIViewController {
     }
     
     @IBAction func editPostButtonClicked(_ sender: UIButton) {
-        dismiss(animated: true, completion: { self.clos?(self.postText) })
+        dismiss(animated: true) { [weak self] in
+            self?.clos?(self?.postText)
+        }
     }
     
     @IBAction func cancelEditPostButton(_ sender: UIButton) {

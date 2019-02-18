@@ -39,9 +39,9 @@ extension PostsPresenter: PostsViewPresenter {
     }
     
     func loadPosts() {
-        FirebaseService<Post>().loadItems(FirebaseService.Item.posts, orderedBy: Post.Keys.text) { items in
-            self.posts = items
-            self.view?.updateView()
+        FirebaseService<Post>().loadItems(FirebaseService.Item.posts, orderedBy: Post.Keys.text) { [weak self] items in
+            self?.posts = items
+            self?.view?.updateView()
         }
     }
     

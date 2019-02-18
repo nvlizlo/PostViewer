@@ -71,7 +71,7 @@ extension PostsViewController: UITableViewDataSource {
             controller.modalTransitionStyle = .crossDissolve
             controller.modalPresentationStyle = .overCurrentContext
             
-            controller.clos = { text in
+            controller.clos = { [weak self] text in
                 self?.presenter.updatePost(postText: text, index: indexPath.row)
             }
             
@@ -80,8 +80,8 @@ extension PostsViewController: UITableViewDataSource {
             }
         }
         
-        cell.deleteButtonClosure = {
-            self.presenter.removePost(index: indexPath.row)
+        cell.deleteButtonClosure = { [weak self] in
+            self?.presenter.removePost(index: indexPath.row)
         }
         return cell
     }

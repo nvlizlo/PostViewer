@@ -41,7 +41,6 @@
 		CDFF75E221E37A9C00027206 /* PostTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDFF75E121E37A9C00027206 /* PostTableViewCell.swift */; };
 		D62C1D2164596B0790459BCE /* Pods_PostViewerUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A88030336DE63155693B8E4E /* Pods_PostViewerUITests.framework */; };
 		E2128BBD21DCD8E4000F8CB7 /* UIView+layerProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2128BBC21DCD8E4000F8CB7 /* UIView+layerProperties.swift */; };
-		E2143C8A21D6604D005738A9 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2143C8921D6604D005738A9 /* SignUpViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -108,7 +107,6 @@
 		CDFF75DF21E3794F00027206 /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 		CDFF75E121E37A9C00027206 /* PostTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostTableViewCell.swift; sourceTree = "<group>"; };
 		E2128BBC21DCD8E4000F8CB7 /* UIView+layerProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+layerProperties.swift"; sourceTree = "<group>"; };
-		E2143C8921D6604D005738A9 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		EC81625923CA5C5204FBAB48 /* Pods-PostViewerTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PostViewerTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-PostViewerTests/Pods-PostViewerTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -187,7 +185,6 @@
 				CDFC73DC21F524F100219FA8 /* Supporting files */,
 				CDFF75D821E3760600027206 /* Posts */,
 				E294C57421D664790044F650 /* Extensions */,
-				E2143C8821D66029005738A9 /* SignUp */,
 				E2143C8721D66020005738A9 /* Login */,
 				CDFF75D221D59C2400027206 /* PostViewer.entitlements */,
 				CDCA415721CEC8E800B957AC /* AppDelegate.swift */,
@@ -320,19 +317,11 @@
 		E2143C8721D66020005738A9 /* Login */ = {
 			isa = PBXGroup;
 			children = (
+				CDFF75D521DD802700027206 /* View */,
 				CDCA415921CEC8E800B957AC /* LoginViewController.swift */,
 				CD14AE1C220766D9004ADF87 /* LoginPresenter.swift */,
 			);
 			path = Login;
-			sourceTree = "<group>";
-		};
-		E2143C8821D66029005738A9 /* SignUp */ = {
-			isa = PBXGroup;
-			children = (
-				CDFF75D521DD802700027206 /* View */,
-				E2143C8921D6604D005738A9 /* SignUpViewController.swift */,
-			);
-			path = SignUp;
 			sourceTree = "<group>";
 		};
 		E294C57421D664790044F650 /* Extensions */ = {
@@ -599,7 +588,6 @@
 				CD14AE212207A913004ADF87 /* FirebaseService.swift in Sources */,
 				CDFF75DA21E3762200027206 /* PostsViewController.swift in Sources */,
 				CD14AE1D220766D9004ADF87 /* LoginPresenter.swift in Sources */,
-				E2143C8A21D6604D005738A9 /* SignUpViewController.swift in Sources */,
 				CDFF75D721DD83DA00027206 /* RoundedTextField.swift in Sources */,
 				CDFF75D421DD7EEB00027206 /* UITextField+textSpacer.swift in Sources */,
 				E2128BBD21DCD8E4000F8CB7 /* UIView+layerProperties.swift in Sources */,
