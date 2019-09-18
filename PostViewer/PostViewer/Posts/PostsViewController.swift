@@ -43,7 +43,7 @@ class PostsViewController: UIViewController {
         controller.modalTransitionStyle = .crossDissolve
         controller.modalPresentationStyle = .overCurrentContext
         controller.clos = { [weak self] text in
-            self?.presenter.addPost(postText: text)
+            self?.presenter.addPost(postText: text!)
         }
         
         self.present(controller, animated: false)
@@ -72,7 +72,7 @@ extension PostsViewController: UITableViewDataSource {
             controller.modalPresentationStyle = .overCurrentContext
             
             controller.clos = { [weak self] text in
-                self?.presenter.updatePost(postText: text, index: indexPath.row)
+                self?.presenter.updatePost(postText: text!, index: indexPath.row)
             }
             
             self?.present(controller, animated: false) {
